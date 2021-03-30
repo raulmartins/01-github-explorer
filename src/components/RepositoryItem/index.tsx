@@ -1,6 +1,17 @@
 import "./styles.scss";
 
-function RepositoryItem(props) {
+
+interface RepositoryItemProps {
+  repository: {
+    name: string,
+    description: string, 
+    html_url: string
+  }
+}
+
+
+
+function RepositoryItem(props:RepositoryItemProps) {
   return (
     <ul>
       <strong>{props.repository?.name}</strong>
